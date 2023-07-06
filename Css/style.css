@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+/**
+*
+* Testing
+*
+**/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  width: 10px;
+  background-color: #ffffff;
+  border-left: 0 solid #ffffff;
+  border-right: 0 solid #ffffff;
+  margin-block: 3px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #864cff;
+  width: 15% !important;
+  height: 15% !important;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+::-moz-selection {
+  /* code for firefox */
+  color: #ffffff;
+  background-color: #864cff;
+}
+
+::selection {
+  /* code for firefox */
+  color: #ffffff;
+  background-color: #864cff;
+}
+
+/* end variables */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /*small*/
+  /* tablet */
+  /* Medium */
+  /* desktop  */
+}
+@media (min-width: 577px) {
+  .container {
+    width: 550px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1300px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*! start variables*/
+/*! end variables*/
+/*! start Global Rules*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: #b54949;
+  border: 1px solid #b54949 !important;
+}
+
+.error-text,
+.success-text {
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-between;
+  padding-top: 0.75rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: "League Spartan", sans-serif;
+  font-style: italic;
+}
+.error-text::after,
+.success-text::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  padding: 0rem 0.375rem;
+}
+
+.error-text {
+  color: #b54949;
+}
+.error-text::after {
+  content: "!";
+}
+
+.success {
+  color: #9e7f66;
+  border: 1px solid #9e7f66 !important;
+}
+
+.success-text {
+  color: #9e7f66;
+}
+.success-text::after {
+  content: "\f00c";
+}
+
+/*! end Global Rules*/
+/*! start code */
+.card {
+  background-color: #ffffff;
+  border-radius: 1.5rem 1.5rem 12.5rem 1.5rem;
+  width: 40rem;
+  height: 29rem;
+  padding: 3.125rem;
+  margin: auto;
+  position: relative;
+  top: 14rem;
+}
+.card .inputs-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  position: relative;
+}
+.card .inputs-container .input {
+  display: flex;
+  flex-direction: column;
+  max-width: 7.5rem;
+}
+.card .inputs-container .input label {
+  padding: 0.75rem 0;
+  color: #787887;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+}
+.card .inputs-container .input input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  width: 7rem;
+  height: 3rem;
+  padding: 0.625rem;
+  border: 1px solid #787887;
+  border-radius: 6px;
+  color: #787887;
+  font-size: 20px;
+  font-weight: 800;
+}
+.card .inputs-container .input input[type=number]::-webkit-outer-spin-button, .card .inputs-container .input input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.card .inputs-container .input input[type=number]:active, .card .inputs-container .input input[type=number]:focus, .card .inputs-container .input input[type=number]:hover {
+  border: 1px solid #864cff !important;
+  outline: 1px solid #864cff !important;
+}
+.card .inputs-container #btn {
+  border: none;
+  border-radius: 50%;
+  padding: 1rem 0.75rem;
+  position: absolute;
+  right: 0rem;
+  bottom: -4.875rem;
+  background-color: #864cff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(134, 76, 255, 0.35);
+  cursor: pointer;
+}
+.card .inputs-container #btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(134, 76, 255, 0.35);
+}
+.card .inputs-container #btn:hover {
+  box-shadow: 0rem 0rem 1rem #864cff;
+}
+.card .inputs-container #btn img {
+  width: 80%;
+  height: 80%;
+  transition: 1s;
+}
+.card .inputs-container #btn img:hover {
+  transition: 1s;
+  transform: rotateZ(360deg);
+}
+.card .results-container .result {
+  font-size: 60px;
+  font-weight: 800;
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
+}
+.card .results-container .result .her {
+  color: #864cff;
+}
+.card .results-container::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #787887;
+  margin: 2.25rem auto 2.2rem;
+}
+@media (max-width: 768px) {
+  .card {
+    padding: 2.25rem;
+  }
+  .card .inputs-container .input {
+    max-width: 6.25rem;
+  }
+  .card .inputs-container #btn {
+    right: -1rem;
+  }
+}
+@media (max-width: 550px) {
+  .card {
+    height: 28rem;
+    padding: 1.875rem;
+  }
+  .card .inputs-container #btn {
+    bottom: -5.625rem;
+  }
+  .card .results-container::before {
+    margin: 3.25rem auto 2.2rem;
+  }
+  .card .error-text,
+  .card .success-text {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 440px) {
+  .card .inputs-container {
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .card .inputs-container .input input[type=number] {
+    width: 5rem;
+    padding: 0.5rem;
+  }
+  .card .inputs-container #btn {
+    bottom: -5.625rem;
+    right: 8.8rem;
+    padding: 0.875rem 0.625rem;
+  }
+  .card .inputs-container #btn img {
+    width: 60%;
+    height: 60%;
+  }
+  .card .results-container .result {
+    font-size: 50px;
+  }
+  .card .results-container::before {
+    margin: 3.75rem auto 3.125rem;
+  }
+}
+@media (max-width: 380px) {
+  .card {
+    width: 19rem;
+  }
+  .card .inputs-container .input {
+    max-width: 5rem;
+  }
+  .card .inputs-container .input label {
+    font-size: 12px;
+  }
+  .card .inputs-container .input input[type=number] {
+    width: 4rem;
+    font-size: 14px;
+  }
+  .card .inputs-container #btn {
+    right: 5.8rem;
+  }
+  .card .results-container .result {
+    font-size: 40px;
+  }
+  .card .error-text,
+  .card .success-text {
+    font-size: 0.375rem;
+  }
+}
+
+/*! start Attribution */
+.attribution {
+  position: absolute;
+  bottom: 4%;
+  color: #787887;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+}
+.attribution a {
+  font-size: smaller;
+  text-decoration: none;
+  color: #864cff;
+  text-transform: capitalize;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+}
+.attribution a:hover::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  content: "\f0a9";
+  font-size: 14px;
+  padding: 0 8px;
+}
+@media (max-width: 440px) {
+  .attribution {
+    white-space: break-spaces;
+    line-height: 2;
+    left: 0;
+  }
+}
+
+/*! end Attribution */
+/*! end code *//*# sourceMappingURL=style.css.map */

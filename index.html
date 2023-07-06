@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add a Favicon to your Site -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <!--Font Awesone Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--Main Template Css File-->
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="card">
+                <form class="inputs-container" id="form">
+                    <div class="input">
+                        <label for="day_input">day</label>
+                        <input type="number" id="day_input" name="day" placeholder="DD">
+                        <span></span>
+                    </div>
+
+                    <div class="input">
+                        <label for="month_input">month</label>
+                        <input type="number" id="month_input" name="month" placeholder="MM">
+                        <span></span>
+                    </div>
+
+                    <div class="input">
+                        <label for="year_input">year</label>
+                        <input type="number" id="year_input" name="year" placeholder="YYYY">
+                        <span></span>
+                    </div>
+
+                    <button id="btn" type="submit">
+                        <img src="images/icon-arrow.svg" alt="arrow">
+                    </button>
+                </form>
+
+
+                <div class="results-container">
+                    <div class="result">
+                        <span class="her" id="years_result">--</span>
+                        <span>years</span>
+                    </div>
+
+                    <div class="result">
+                        <span class="her" id="months_result">--</span>
+                        <span>months</span>
+                    </div>
+
+                    <div class="result">
+                        <span class="her" id="days_result">--</span>
+                        <span>days</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- start Attribution -->
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+                    Mentor</a>.
+                Coded by <a href="#">Maher Elmair</a>.
+            </div>
+            <!-- end Attribution -->
+        </div>
+    </div>
+    <!--Main Template Java Script File-->
+    <script src="Javascript/app.js"></script>
+</body>
+
+</html>
