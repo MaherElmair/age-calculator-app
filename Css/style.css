@@ -93,6 +93,10 @@ body {
   background-color: #f0f0f0;
 }
 
+.main {
+  position: relative;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -320,7 +324,7 @@ body {
 /*! start Attribution */
 .attribution {
   position: absolute;
-  bottom: 4%;
+  top: 50rem;
   color: #787887;
   font-size: 16px;
   font-weight: 700;

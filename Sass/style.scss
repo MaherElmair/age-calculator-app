@@ -38,6 +38,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: $bg;
 }
+.main {
+  position: relative;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -138,9 +141,9 @@ body {
         }
         &:active,
         &:focus,
-        &:hover{
+        &:hover {
           border: 1px solid $mainColor !important;
-          outline:1px solid $mainColor !important ;
+          outline: 1px solid $mainColor !important ;
         }
       }
     }
@@ -159,14 +162,14 @@ body {
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba(134, 76, 255, 0.35);
       }
-      &:hover{
+      &:hover {
         box-shadow: 0rem 0rem 1rem $mainColor;
       }
       img {
         width: 80%;
         height: 80%;
         transition: 1s;
-        &:hover{
+        &:hover {
           transition: 1s;
           transform: rotateZ(360deg);
         }
@@ -265,12 +268,12 @@ body {
       }
       #btn {
         right: 5.8rem;
+      }
     }
-    }
-    .results-container{
+    .results-container {
       .result {
         font-size: 40px;
-    }
+      }
     }
     .error-text,
     .success-text {
@@ -282,7 +285,8 @@ body {
 /*! start Attribution */
 .attribution {
   position: absolute;
-  bottom: 4%;
+  // bottom: 4%;
+  top: 50rem;
   color: $colorSubheading;
   font: {
     size: 16px;
@@ -298,8 +302,7 @@ body {
     font: {
       size: 14px;
       weight: 400;
-      style:normal;
-
+      style: normal;
     }
     &:hover::after {
       font-family: "Font Awesome 6 Free";
@@ -308,7 +311,6 @@ body {
       font-size: 14px;
       padding: 0 8px;
     }
-
   }
   @include media("<=440px") {
     white-space: break-spaces;
